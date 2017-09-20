@@ -7,7 +7,11 @@ public abstract class Conta {
 	private String agencia;
 
 	public void deposita(double valor) {
-		this.saldo += valor;
+		if (valor < 0) {
+			throw new IllegalArgumentException("Você tentou depositar um valor negativo");
+		} else {
+			this.saldo += valor;
+		}
 	}
 
 	public void saca(double valor) {
@@ -41,11 +45,11 @@ public abstract class Conta {
 	public String getTitular() {
 		return titular;
 	}
-	
+
 	public void transfere(double valor, Conta conta) {
 		this.saca(valor);
 		conta.deposita(valor);
 	}
-	
+
 	public abstract String getTipo();
 }
