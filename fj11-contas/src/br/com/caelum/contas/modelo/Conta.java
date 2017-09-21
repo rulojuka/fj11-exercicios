@@ -52,4 +52,18 @@ public abstract class Conta {
 	}
 
 	public abstract String getTipo();
+	
+	@Override
+	public String toString() {
+		return "Conta do " + this.getTitular().toUpperCase();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj != null && obj instanceof Conta) {
+			Conta outraConta = (Conta) obj;
+			return this.numero == outraConta.getNumero() && this.agencia.equals(outraConta.getAgencia());
+		}
+		return false;
+	}
 }
