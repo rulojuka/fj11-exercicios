@@ -32,12 +32,16 @@ class TestaFixandoConhecimento{
 
 		Casa c = new Casa();
 		c.pinta("Azul");
-		c.porta1 = new Porta();
-		c.porta1.fecha();
-		c.porta2 = new Porta();
-		c.porta2.abre();
-		c.porta3 = new Porta();
-		c.porta3.abre();
-		System.out.println("A casa está com " + c.quantasPortasEstaoAbertas() + " portas abertas.");
+		porta = new Porta();
+		porta.fecha();
+		c.adicionaPorta(porta);
+		porta = new Porta();
+		porta.abre();
+		c.adicionaPorta(porta);
+		porta = new Porta();
+		porta.abre();
+		c.adicionaPorta(porta);
+		System.out.println("A casa tem "+c.totalDePortas() + " portas e está com " + c.quantasPortasEstaoAbertas() + " portas abertas.");
+	
 	}
 }

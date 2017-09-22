@@ -1,23 +1,24 @@
 class Casa{
-	String cor;
-	Porta porta1;
-	Porta porta2;
-	Porta porta3;
+	private String cor;
+	int totalDePortas;
+	Porta[] portas = new Porta[10];
 
-	void pinta(String s){
+	public void pinta(String s){
 		this.cor = s;
 	}
-	int quantasPortasEstaoAbertas(){
+	public int quantasPortasEstaoAbertas(){
 		int valor = 0;
-		if(porta1.estaAberta()){
-			valor++;
-		}
-		if(porta2.estaAberta()){
-			valor++;
-		}
-		if(porta3.estaAberta()){
-			valor++;
+		for (int i = 0; i < totalDePortas; i++) {
+			if(portas[i].estaAberta()) {
+				valor++;
+			}
 		}
 		return valor;
+	}
+	public void adicionaPorta(Porta p) {
+		portas[totalDePortas++] = p;
+	}
+	public int totalDePortas() {
+		return this.totalDePortas;
 	}
 }
