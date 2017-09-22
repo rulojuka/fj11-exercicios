@@ -3,6 +3,15 @@ package br.com.caelum.contas.modelo;
 import br.com.caelum.contas.exceptions.SaldoInsuficienteException;
 
 public class ContaCorrente extends Conta implements Tributavel {
+	
+	public ContaCorrente(String nome) {
+		super(nome);
+	}
+
+	public ContaCorrente() {
+		super();
+	}
+
 	public String getTipo() {
 		return "Conta Corrente";
 	}
