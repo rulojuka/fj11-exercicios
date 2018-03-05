@@ -1,0 +1,53 @@
+- Migué inicial
+- Entrevista + avisos
+- História do java, jvm, primeiro programa
+- Exercícios 2.10 pág 10 e 2.14 pág 13 
+- Variáveis e tipos primitivos
+- Exercícios 3.3 pág 18
+- Casting e promoção
+- If e else
+- While e for
+- Exercícios 3.13 pág 27
+- Orientação a objetos
+- Exercícios 4.12 pág 45
+- Encapsulamento, modificadores de acesso, getters e setters, construtores
+- Exercícios 5.8 pág 64 (até o 4 - o exercício 5 é de static)
+- Eclipse
+- Exercícios 6.8 pág 77
+- Pacotes
+- Exercícios 7.6 pág 87
+- Revisão dos modificadores de acesso: public, protected, padrão e private
+- jar
+- javadoc
+- Exercícios 8.5 pág 97
+- Falar que vamos usar uma interface gráfica externa
+- Exercícios 8.7 pág 98 (importar o fj11-lib-contas.jar)
+- javafx - GUI (Mini explicação MVC)
+- Exercícios 8.9
+- Herança, polimorfismo, reescrita
+- Exercícios 9.7 pág 119
+- Classes abstratas
+- Exercícios 10.6 pág 131
+- Interface
+- Exercícios 11.5 pág 142
+- Introdução a exceções (motivação)
+- Exercício 12.2.1 (Falar para os alunos copiarem da pág 150 e rodarem)
+- Explicação Exceções e tratamento de exceções
+- Exercícios 12.2 pág 150 e Exercícios 12.11
+- Java lang, classe System, classe Object, equals e toString, casting de referências
+- Exercícios 13.5 pág 171
+- Classe String
+- Exercícios 13.7 pág 175
+- Arrays de tipos primitivos e privados, enhanced-for ( for(int x : colecao) )
+- Exercícios 14.5 pág 182
+- Lista
+- Collections (sort, min, max, reverse, etc), interface Comparable
+- Exercícios 15.6 pág 195
+- Dinâmica Set e Map
+- Explicação HashSet, HashMap, TreeSet, TreeMap
+- Exercícios 15.15 pág 206
+- Java IO - Explicar Stream, mostrar a implementação
+- Wrappers e autoboxing
+- Exercícios 16.11 pág 222
+- Certificados
+- Avaliação online
