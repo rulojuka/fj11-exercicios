@@ -48,6 +48,5 @@
 - Exercícios 15.15 pág 206
 - Java IO - Explicar Stream, mostrar a implementação
 - Wrappers e autoboxing
+- Certificados e avaliação online
 - Exercícios 16.11 pág 222
-- Certificados
-- Avaliação online
