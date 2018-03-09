@@ -13,37 +13,47 @@ public class ManipuladorDeContas {
 
 	public void criaConta(Evento evento) {
 		String tipo = evento.getSelecionadoNoRadio("tipo");
-		if(tipo.equals("Conta Corrente")) {
+		if (tipo.equals("Conta Corrente")) {
 			this.conta = new ContaCorrente();
-		}
-		else {
+		} else {
 			this.conta = new ContaPoupanca();
 		}
 		conta.setAgencia(evento.getString("agencia"));
 		conta.setNumero(evento.getInt("numero"));
 		conta.setTitular(evento.getString("titular"));
 	}
-	
+
 	public void deposita(Evento evento) {
 		double valorDigitado = evento.getDouble("valorOperacao");
 		this.conta.deposita(valorDigitado);
 	}
-	
+
 	public void saca(Evento evento) {
 		double valorDigitado = evento.getDouble("valorOperacao");
 		this.conta.saca(valorDigitado);
 	}
-	
+
 	public void transfere(Evento evento) {
 		Conta destino = (Conta) evento.getSelecionadoNoCombo("destino");
 		conta.transfere(evento.getDouble("valorTransferencia"), destino);
 	}
-	
+
 	public void ordenaLista(Evento evento) {
 		List<Conta> contas = evento.getLista("destino");
 		Collections.sort(contas);
 		// Collections.reverse(contas);
 		// Collections.shuffle(contas);
 		// Collections.rotate(contas, 2);
+	}
+
+	public void salvaDados(Evento evento) {
+		List<Conta> contas = evento.getLista("listaContas");
+		RepositorioDeContas repositorio = new RepositorioDeContas();
+		repositorio.salva(contas);
+	}
+
+	public List<Conta> carregaDados() {
+		RepositorioDeContas repositorio = new RepositorioDeContas();
+		return repositorio.carrega();
 	}
 }
